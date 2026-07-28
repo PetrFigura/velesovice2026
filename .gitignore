@@ -1,0 +1,11 @@
+# Interní podklady – NIKDY nenahrávat na veřejný web!
+# Obsahují analýzy pro/proti a interní poznámky k programu.
+*.docx
+*.doc
+*.xlsx
+~$*
+
+# Systémové soubory
+Thumbs.db
+desktop.ini
+.DS_Store
