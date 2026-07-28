@@ -98,11 +98,10 @@ a:hover { color: var(--blue-900); }
 }
 
 .brand__mark {
-    height: 44px;
-    width: 44px;
-    flex: 0 0 44px;
+    height: 46px;
+    width: auto;
+    flex: 0 0 auto;
     display: block;
-    border-radius: 11px;
 }
 
 .brand__text { display: flex; flex-direction: column; line-height: 1.15; }
@@ -170,37 +169,15 @@ a:hover { color: var(--blue-900); }
 .hero h1 { text-shadow: 0 2px 18px rgba(6, 24, 16, .45); }
 .hero__claim { text-shadow: 0 1px 12px rgba(6, 24, 16, .5); }
 
-/* Logo v hero sekci */
-.hero__lockup {
+/* Znak obce v hero */
+.hero__crest {
     position: absolute;
-    right: 40px;
-    top: 36px;
+    right: 44px;
+    top: 40px;
     z-index: 3;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 10px 18px 10px 12px;
-    background: rgba(10, 32, 24, .42);
-    border: 1px solid rgba(255, 255, 255, .22);
-    border-radius: 18px;
-    backdrop-filter: blur(4px);
-}
-
-.hero__lockup img {
-    height: 62px;
+    height: 132px;
     width: auto;
-    display: block;
-    border-radius: 14px;
-}
-
-.hero__lockup span { display: flex; flex-direction: column; line-height: 1.25; }
-.hero__lockup strong { font-size: 1.05rem; color: #fff; }
-.hero__lockup em {
-    font-style: normal;
-    font-size: .78rem;
-    letter-spacing: .09em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, .8);
+    filter: drop-shadow(0 6px 18px rgba(6, 24, 16, .45));
 }
 
 .hero__caption {
@@ -402,12 +379,13 @@ a:hover { color: var(--blue-900); }
 .footer h3 { color: #fff; font-size: 1rem; margin-bottom: .4em; }
 
 .footer__crest {
-    height: 62px;
+    height: 74px;
     width: auto;
     display: block;
-    margin-bottom: 14px;
-    border-radius: 14px;
-    border: 1px solid rgba(255, 255, 255, .25);
+    margin-bottom: 12px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 4px;
 }
 
 .footer__bottom {
@@ -420,18 +398,15 @@ a:hover { color: var(--blue-900); }
 /* ---------- Mobil ---------- */
 
 @media (max-width: 900px) {
-    .hero__lockup { right: 20px; top: 24px; }
-    .hero__lockup img { height: 50px; }
+    .hero__crest { height: 92px; right: 22px; top: 26px; }
 }
 
 @media (max-width: 640px) {
     body { font-size: 17px; }
-    .hero { min-height: 470px; }
-    .hero__inner { padding: 122px 20px 46px; }
-    .hero__lockup { right: 16px; top: 18px; padding: 8px; gap: 0; }
-    .hero__lockup img { height: 46px; }
-    .hero__lockup span { display: none; }
-    .brand__mark { height: 38px; width: 38px; flex: 0 0 38px; }
+    .hero { min-height: 480px; }
+    .hero__inner { padding: 132px 20px 46px; }
+    .hero__crest { height: 74px; right: 18px; top: 20px; }
+    .brand__mark { height: 38px; }
     .section { padding: 48px 0; }
     .topbar__inner { padding: 10px 16px; }
     .nav a { padding: 7px 11px; font-size: .92rem; }
