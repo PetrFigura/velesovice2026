@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://velesovice2026.cz/sitemap.xml
