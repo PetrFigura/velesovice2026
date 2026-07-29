@@ -3,174 +3,99 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kandidáti – SNK Velešovice 2026</title>
-<meta name="description" content="Seznam kandidátů sdružení nezávislých kandidátů SNK Velešovice pro komunální volby 2026.">
-<link rel="canonical" href="https://velesovice2026.cz/kandidati.html">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="img/znak.svg" type="image/svg+xml">
+<meta name="robots" content="noindex, nofollow">
+<title>Interní náhled – SNK Velešovice</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(160deg, #1d4732 0%, #123c52 100%);
+    font-family: "Segoe UI", Roboto, Arial, sans-serif; color: #1a2430; padding: 24px;
+  }
+  .box {
+    background: #fff; border-radius: 18px; padding: 40px 36px; width: 100%; max-width: 430px;
+    box-shadow: 0 18px 50px rgba(6, 24, 16, .35);
+  }
+  h1 { margin: 0 0 10px; font-size: 1.5rem; color: #1d4732; }
+  p { margin: 0 0 22px; color: #4a5763; line-height: 1.6; font-size: .98rem; }
+  form { display: flex; flex-direction: column; gap: 12px; }
+  input {
+    padding: 13px 15px; font-size: 1.05rem; border: 2px solid #dde4e8; border-radius: 10px;
+    font-family: inherit; width: 100%;
+  }
+  input:focus { outline: none; border-color: #2f6b4f; }
+  button {
+    padding: 13px 20px; font-size: 1rem; font-weight: 700; border: 0; border-radius: 999px;
+    background: #2f6b4f; color: #fff; cursor: pointer; font-family: inherit;
+  }
+  button:hover { background: #1d4732; }
+  button:disabled { opacity: .6; cursor: progress; }
+  .err { color: #b3261e; font-size: .95rem; margin: 14px 0 0; }
+  .err[hidden] { display: none; }
+</style>
 </head>
 <body>
+<div class="box">
+  <h1>Interní náhled</h1>
+  <p>Tyto stránky jsou zatím dostupné jen kandidátům sdružení SNK Velešovice.
+     Zadejte prosím heslo.</p>
+  <form id="form">
+    <input type="password" id="pw" placeholder="Heslo" autocomplete="current-password" autofocus>
+    <button type="submit" id="btn">Otevřít stránku</button>
+  </form>
+  <p class="err" id="err" hidden>Heslo není správné, zkuste to znovu.</p>
+</div>
 
-<header class="topbar">
-  <div class="topbar__inner">
-    <a class="brand" href="index.html">
-      <img class="brand__mark" src="img/znak.svg" alt="Znak obce Velešovice" width="46" height="53">
-      <span class="brand__text">
-        <span class="brand__name">SNK Velešovice</span>
-        <span class="brand__sub">Komunální volby 2026</span>
-      </span>
-    </a>
-    <nav class="nav" aria-label="Hlavní navigace">
-      <a href="index.html">Úvod</a>
-      <a href="program.html">Volební program</a>
-      <a href="kandidati.html" aria-current="page">Kandidáti</a>
-    </nav>
-  </div>
-</header>
+<script>
+const DATA = { s: "q5Oq3Oah7zVgJZRuc7LA2g==", i: "vnCX+RWzBYxQRSHo", c: "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" };
+const KLIC  = "snk-velesovice-nahled";
 
-<main>
+const b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
 
-  <section class="section">
-    <div class="wrap">
-      <div class="section__head">
-        <span class="eyebrow">Naše kandidátka</span>
-        <h1>Lidé, kteří ve Velešovicích doopravdy žijí</h1>
-        <p class="lead">Devět jmen, žádná politická strana za nimi. Jsou mezi nimi zástupci místních
-          spolků, odborníci i lidé, kteří se prostě nechtějí dál dívat na to, co v obci nefunguje.</p>
-      </div>
+async function odemkni(heslo) {
+  const km = await crypto.subtle.importKey(
+    "raw", new TextEncoder().encode(heslo), "PBKDF2", false, ["deriveKey"]);
+  const key = await crypto.subtle.deriveKey(
+    { name: "PBKDF2", salt: b64(DATA.s), iterations: 200000, hash: "SHA-256" },
+    km, { name: "AES-GCM", length: 256 }, false, ["decrypt"]);
+  const pt = await crypto.subtle.decrypt(
+    { name: "AES-GCM", iv: b64(DATA.i) }, key, b64(DATA.c));
+  return new TextDecoder().decode(pt);
+}
 
-      <!--
-        JAK DOPLNIT PROFESI A MOTTO:
-        Do <p class="person__role"> napiš profesi nebo roli (např. Podnikatel, Zástupce hasičů).
-        Do <p class="person__motto"> napiš krátkou větu – proč kandiduje.
-        Prázdné odstavce se na webu vůbec nezobrazí, takže je můžeš klidně nechat prázdné.
-      -->
+function zobraz(html) {
+  document.open();
+  document.write(html);
+  document.close();
+}
 
-      <div class="people">
+// Už odemčeno v této záložce? Otevři bez dotazu.
+(async () => {
+  const ulozene = sessionStorage.getItem(KLIC);
+  if (!ulozene) return;
+  try { zobraz(await odemkni(ulozene)); }
+  catch (e) { sessionStorage.removeItem(KLIC); }
+})();
 
-        <article class="person">
-          <div class="person__num">1</div>
-          <div>
-            <p class="person__name">Hynek Šedý</p>
-            <p class="person__role"></p>
-            <p class="person__motto"></p>
-          </div>
-        </article>
-
-        <article class="person">
-          <div class="person__num">2</div>
-          <div>
-            <p class="person__name">Ing. Eva Vahalová, PhD.</p>
-            <p class="person__role"></p>
-            <p class="person__motto"></p>
-          </div>
-        </article>
-
-        <article class="person">
-          <div class="person__num">3</div>
-          <div>
-            <p class="person__name">Renata Palčíková</p>
-            <p class="person__role"></p>
-            <p class="person__motto"></p>
-          </div>
-        </article>
-
-        <article class="person">
-          <div class="person__num">4</div>
-          <div>
-            <p class="person__name">Ing. Vlastimil Sedláček</p>
-            <p class="person__role"></p>
-            <p class="person__motto"></p>
-          </div>
-        </article>
-
-        <article class="person">
-          <div class="person__num">5</div>
-          <div>
-            <p class="person__name">Ing. Jaroslav Stružka</p>
-            <p class="person__role"></p>
-            <p class="person__motto"></p>
-          </div>
-        </article>
-
-        <article class="person">
-          <div class="person__num">6</div>
-          <div>
-            <p class="person__name">Ing. Petr Figura</p>
-            <p class="person__role"></p>
-            <p class="person__motto"></p>
-          </div>
-        </article>
-
-        <article class="person">
-          <div class="person__num">7</div>
-          <div>
-            <p class="person__name">Ing. Zora Plotěná</p>
-            <p class="person__role"></p>
-            <p class="person__motto"></p>
-          </div>
-        </article>
-
-        <article class="person">
-          <div class="person__num">8</div>
-          <div>
-            <p class="person__name">Petr Osička</p>
-            <p class="person__role"></p>
-            <p class="person__motto"></p>
-          </div>
-        </article>
-
-        <article class="person">
-          <div class="person__num">9</div>
-          <div>
-            <p class="person__name">Eva Kopuletá</p>
-            <p class="person__role"></p>
-            <p class="person__motto"></p>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--soft">
-    <div class="wrap">
-      <div class="note">
-        <h3>Máte dotaz na někoho z kandidátů?</h3>
-        <p>Potkáte nás v obci každý den – u autobusu, na hřišti, na hodech. Ptejte se nás na cokoli
-          z našeho <a href="program.html">volebního programu</a>.</p>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <div class="wrap">
-    <div class="footer__grid">
-      <div>
-        <img class="footer__crest" src="img/znak.svg" alt="Znak obce Velešovice">
-        <h3>SNK Velešovice</h3>
-        <p>Sdružení nezávislých kandidátů pro komunální volby 2026.</p>
-      </div>
-      <div>
-        <h3>Obsah</h3>
-        <p>
-          <a href="index.html">Úvod</a><br>
-          <a href="program.html">Volební program</a><br>
-          <a href="kandidati.html">Kandidáti</a>
-        </p>
-      </div>
-      <div>
-        <h3>Kontakt</h3>
-        <p>velesovice2026.cz</p>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      &copy; 2026 SNK Velešovice · Volební web nezávislých kandidátů
-    </div>
-  </div>
-</footer>
-
+document.getElementById("form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const heslo = document.getElementById("pw").value;
+  const btn = document.getElementById("btn");
+  const err = document.getElementById("err");
+  err.hidden = true;
+  btn.disabled = true;
+  btn.textContent = "Odemykám…";
+  try {
+    const html = await odemkni(heslo);
+    sessionStorage.setItem(KLIC, heslo);
+    zobraz(html);
+  } catch (chyba) {
+    err.hidden = false;
+    btn.disabled = false;
+    btn.textContent = "Otevřít stránku";
+    document.getElementById("pw").select();
+  }
+});
+</script>
 </body>
 </html>

@@ -3,205 +3,99 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Volební program – SNK Velešovice 2026</title>
-<meta name="description" content="Volební program sdružení nezávislých kandidátů Velešovice pro komunální volby 2026: bezpečnost, protipovodňová opatření, osvětlení, bydlení pro seniory, otevřená komunikace.">
-<link rel="canonical" href="https://velesovice2026.cz/program.html">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="img/znak.svg" type="image/svg+xml">
+<meta name="robots" content="noindex, nofollow">
+<title>Interní náhled – SNK Velešovice</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(160deg, #1d4732 0%, #123c52 100%);
+    font-family: "Segoe UI", Roboto, Arial, sans-serif; color: #1a2430; padding: 24px;
+  }
+  .box {
+    background: #fff; border-radius: 18px; padding: 40px 36px; width: 100%; max-width: 430px;
+    box-shadow: 0 18px 50px rgba(6, 24, 16, .35);
+  }
+  h1 { margin: 0 0 10px; font-size: 1.5rem; color: #1d4732; }
+  p { margin: 0 0 22px; color: #4a5763; line-height: 1.6; font-size: .98rem; }
+  form { display: flex; flex-direction: column; gap: 12px; }
+  input {
+    padding: 13px 15px; font-size: 1.05rem; border: 2px solid #dde4e8; border-radius: 10px;
+    font-family: inherit; width: 100%;
+  }
+  input:focus { outline: none; border-color: #2f6b4f; }
+  button {
+    padding: 13px 20px; font-size: 1rem; font-weight: 700; border: 0; border-radius: 999px;
+    background: #2f6b4f; color: #fff; cursor: pointer; font-family: inherit;
+  }
+  button:hover { background: #1d4732; }
+  button:disabled { opacity: .6; cursor: progress; }
+  .err { color: #b3261e; font-size: .95rem; margin: 14px 0 0; }
+  .err[hidden] { display: none; }
+</style>
 </head>
 <body>
+<div class="box">
+  <h1>Interní náhled</h1>
+  <p>Tyto stránky jsou zatím dostupné jen kandidátům sdružení SNK Velešovice.
+     Zadejte prosím heslo.</p>
+  <form id="form">
+    <input type="password" id="pw" placeholder="Heslo" autocomplete="current-password" autofocus>
+    <button type="submit" id="btn">Otevřít stránku</button>
+  </form>
+  <p class="err" id="err" hidden>Heslo není správné, zkuste to znovu.</p>
+</div>
 
-<header class="topbar">
-  <div class="topbar__inner">
-    <a class="brand" href="index.html">
-      <img class="brand__mark" src="img/znak.svg" alt="Znak obce Velešovice" width="46" height="53">
-      <span class="brand__text">
-        <span class="brand__name">SNK Velešovice</span>
-        <span class="brand__sub">Komunální volby 2026</span>
-      </span>
-    </a>
-    <nav class="nav" aria-label="Hlavní navigace">
-      <a href="index.html">Úvod</a>
-      <a href="program.html" aria-current="page">Volební program</a>
-      <a href="kandidati.html">Kandidáti</a>
-    </nav>
-  </div>
-</header>
+<script>
+const DATA = { s: "eO/PHnq192227uAYQZtnxQ==", i: "h4nkdvbjREppVeW2", c: "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" };
+const KLIC  = "snk-velesovice-nahled";
 
-<main>
+const b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
 
-  <section class="section">
-    <div class="wrap">
-      <div class="section__head">
-        <span class="eyebrow">Volební program 2026</span>
-        <h1>Co chceme ve Velešovicích prosadit</h1>
-        <p class="lead">Program jsme rozdělili na investiční projekty, které vyžadují peníze a projektovou
-          přípravu, a na cíle, které nestojí téměř nic – jen ochotu pracovat jinak. U každého bodu říkáme
-          konkrétně, co uděláme.</p>
-      </div>
-    </div>
-  </section>
+async function odemkni(heslo) {
+  const km = await crypto.subtle.importKey(
+    "raw", new TextEncoder().encode(heslo), "PBKDF2", false, ["deriveKey"]);
+  const key = await crypto.subtle.deriveKey(
+    { name: "PBKDF2", salt: b64(DATA.s), iterations: 200000, hash: "SHA-256" },
+    km, { name: "AES-GCM", length: 256 }, false, ["decrypt"]);
+  const pt = await crypto.subtle.decrypt(
+    { name: "AES-GCM", iv: b64(DATA.i) }, key, b64(DATA.c));
+  return new TextDecoder().decode(pt);
+}
 
-  <section class="section section--soft" id="investice">
-    <div class="wrap">
-      <div class="section__head">
-        <span class="eyebrow">Část první</span>
-        <h2>Investiční a stavební cíle</h2>
-      </div>
+function zobraz(html) {
+  document.open();
+  document.write(html);
+  document.close();
+}
 
-      <div class="points">
+// Už odemčeno v této záložce? Otevři bez dotazu.
+(async () => {
+  const ulozene = sessionStorage.getItem(KLIC);
+  if (!ulozene) return;
+  try { zobraz(await odemkni(ulozene)); }
+  catch (e) { sessionStorage.removeItem(KLIC); }
+})();
 
-        <article class="point">
-          <h3><span class="point__num">1</span> Bezpečné Velešovice pro děti i seniory</h3>
-          <p>Instalujeme rychlostní semafor v rizikovém úseku a prosadíme vybudování bezpečného přechodu
-            pro chodce na krajské silnici u školy. Obec musí být aktivním iniciátorem jednání s krajem a Policií ČR,
-            ne se vymlouvat, že silnice není obecní.</p>
-        </article>
-
-        <article class="point">
-          <h3><span class="point__num">2</span> Bezpečný Rakovec</h3>
-          <p>Vypracujeme chybějící odbornou dokumentaci a revizi protipovodňových opatření jako základ
-            pro získání státních dotací na ochranu našich domovů.</p>
-        </article>
-
-        <article class="point">
-          <h3><span class="point__num">3</span> Světlo do temných ulic</h3>
-          <ul>
-            <li><strong>Bezpečná cesta na autobus.</strong> Okamžitě využijeme schválené finanční
-              prostředky z rozpočtu na instalaci chybějícího veřejného osvětlení podél frekventované
-              stezky kolem fotbalového hřiště k autobusové zastávce.</li>
-            <li><strong>Doplnění osvětlení v obci.</strong> Doplníme chybějící lampy veřejného osvětlení
-              v rizikových a dosud neosvětlených částech obce s využitím úsporných LED technologií.</li>
-          </ul>
-        </article>
-
-        <article class="point">
-          <h3><span class="point__num">4</span> Odklon těžké techniky</h3>
-          <p>Využijeme a zpevníme stávající zadní obecní cestu, abychom odlehčili obytné zóně a bytovkám
-            od hluku a prachu ze zemědělské dopravy. Zemědělci v obci pracovat musí – nemusí ale jezdit
-            lidem pod okny.</p>
-        </article>
-
-        <article class="point">
-          <h3><span class="point__num">5</span> Komunitní podporované bydlení pro seniory</h3>
-          <p>Využijeme obecní pozemek a připravíme projekt výstavby komunitního podporovaného bydlení
-            o kapacitě 6–10 bezbariérových bytů. Financování zajistíme z velké části prostřednictvím
-            státních dotací.</p>
-          <p>Naším cílem je, aby naši starší spoluobčané nemuseli na stáří odcházet do cizích měst,
-            ale měli možnost zůstat v bezpečí a v blízkosti svých rodin v rodné obci.</p>
-        </article>
-
-        <article class="point">
-          <h3><span class="point__num">6</span> Víceúčelový kulturní dům</h3>
-          <p>Instalujeme ochranné sítě do oken a zregulujeme topení tak, aby sál mohl mimo kulturní akce
-            bezpečně sloužit pro sportovní aktivity místních spolků a dětí.</p>
-        </article>
-
-        <article class="point">
-          <h3><span class="point__num">7</span> Sportoviště pro mladou generaci</h3>
-          <p>Vybudujeme moderní pumptrack s využitím nezávadné výkopové zeminy z rekonstrukce kanalizace,
-            čímž ušetříme náklady na materiál. Realizaci podmíníme získáním externí dotace.</p>
-        </article>
-
-        <article class="point">
-          <h3><span class="point__num">8</span> Bezpečné spojení pro každého – chodník k mlýnu</h3>
-          <p>Obyvatelé u mlýna nesmí zůstat odříznutí a v nebezpečí. Spustíme projektovou přípravu
-            a majetkoprávní vypořádání pro výstavbu nového chodníku podél hlavní silnice směrem k mlýnu,
-            s financováním skrze státní dotace.</p>
-        </article>
-
-        <article class="point">
-          <h3><span class="point__num">9</span> Na kole bezpečně do Slavkova a Rousínova</h3>
-          <p>Obnovíme jednání se sousedními městy a podáme společný dotační projekt na výstavbu bezpečné
-            cyklostezky mimo hlavní silnice.</p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="komunita">
-    <div class="wrap">
-      <div class="section__head">
-        <span class="eyebrow">Část druhá</span>
-        <h2>Otevřenost, komunita a plánování</h2>
-        <p class="lead">Tyto změny nestojí obec téměř nic. Stačí k nim jen vůle pracovat otevřeně
-          a systematicky.</p>
-      </div>
-
-      <div class="points">
-
-        <article class="point point--soft">
-          <h3><span class="point__num">10</span> Otevřená obec pro každého</h3>
-          <p>Vrátíme do ulic klasickou tištěnou úřední desku pro seniory, budeme bleskově zveřejňovat
-            kompletní zápisy z jednání zastupitelstva a zprovozníme aktivní, informativní profil obce
-            na sociálních sítích.</p>
-        </article>
-
-        <article class="point point--soft">
-          <h3><span class="point__num">11</span> Transparentní podpora spolků</h3>
-          <p>Zavedeme jasný a předvídatelný systém obecních dotací pro místní spolky s důrazem na práci
-            s dětmi a mládeží. Spolky jsou srdcem Velešovic.</p>
-        </article>
-
-        <article class="point point--soft">
-          <h3><span class="point__num">12</span> Rozvoj obce s jasným plánem</h3>
-          <p>Zpracujeme urbanistickou studii Velešovic, která určí jasná pravidla pro novou výstavbu,
-            ochranu zeleně a parkování, abychom si zachovali ráz klidné venkovské obce.</p>
-          <p>Zároveň chceme otevřít prostor pro rozumné bydlení našich dětí. Mladí lidé, kteří ve
-            Velešovicích vyrostli, dnes naráží na nedostatek příležitostí a odcházejí do Brna, Rousínova
-            nebo Slavkova. To je pro budoucnost naší komunity velká škoda.</p>
-        </article>
-
-        <article class="point point--soft">
-          <h3><span class="point__num">13</span> Společný život ve Velešovicích</h3>
-          <p>Obec bude partnerem, nikoliv brzdou kulturních a společenských akcí. Podpoříme tradiční hody,
-            sousedská setkání i nové komunitní akce napříč generacemi.</p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--soft">
-    <div class="wrap">
-      <div class="note">
-        <h3>Poznámka na rovinu</h3>
-        <p>U velkých investic – chodník k mlýnu, cyklostezka, bydlení pro seniory – jde o běh na dlouhou
-          trať kvůli pozemkům, schvalování s krajem a dotačním řízením. Neslibujeme, že budou hotové
-          za rok. Slibujeme, že se na nich začne pracovat hned.</p>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <div class="wrap">
-    <div class="footer__grid">
-      <div>
-        <img class="footer__crest" src="img/znak.svg" alt="Znak obce Velešovice">
-        <h3>SNK Velešovice</h3>
-        <p>Sdružení nezávislých kandidátů pro komunální volby 2026.</p>
-      </div>
-      <div>
-        <h3>Obsah</h3>
-        <p>
-          <a href="index.html">Úvod</a><br>
-          <a href="program.html">Volební program</a><br>
-          <a href="kandidati.html">Kandidáti</a>
-        </p>
-      </div>
-      <div>
-        <h3>Kontakt</h3>
-        <p>velesovice2026.cz</p>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      &copy; 2026 SNK Velešovice · Volební web nezávislých kandidátů
-    </div>
-  </div>
-</footer>
-
+document.getElementById("form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const heslo = document.getElementById("pw").value;
+  const btn = document.getElementById("btn");
+  const err = document.getElementById("err");
+  err.hidden = true;
+  btn.disabled = true;
+  btn.textContent = "Odemykám…";
+  try {
+    const html = await odemkni(heslo);
+    sessionStorage.setItem(KLIC, heslo);
+    zobraz(html);
+  } catch (chyba) {
+    err.hidden = false;
+    btn.disabled = false;
+    btn.textContent = "Otevřít stránku";
+    document.getElementById("pw").select();
+  }
+});
+</script>
 </body>
 </html>
