@@ -312,8 +312,8 @@ a:hover { color: var(--blue-900); }
 
 .people {
     display: grid;
-    gap: 18px;
-    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 22px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     align-items: start;              /* karty se neroztahují na výšku sousedů */
 }
 
@@ -321,66 +321,73 @@ a:hover { color: var(--blue-900); }
     background: #fff;
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    padding: 20px 22px;
     box-shadow: var(--shadow);
-    display: flex;
-    gap: 18px;
-    align-items: flex-end;
     overflow: hidden;
 }
 
-.person__body { flex: 1 1 auto; min-width: 0; }
+/* Fotografie přes celou šířku karty */
+.person__photo-wrap {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(165deg, #f2f8f4 0%, #dbe9e1 100%);
+    border-bottom: 1px solid var(--line);
+}
 
-/* Vyfotografovaný portrét bez pozadí – „stojí“ na spodní hraně karty */
 .person__photo {
-    flex: 0 0 132px;
-    width: 132px;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 12%;
     display: block;
-    margin-bottom: -20px;
-    align-self: flex-end;
 }
 
-/* Hlavička karty: číslo nebo fotka + jméno */
-.person__head {
-    display: flex;
-    align-items: center;
-    gap: 14px;
+/* Zástupný obrázek u kandidátů bez fotografie */
+.person__photo--placeholder {
+    object-fit: contain;
+    object-position: center bottom;
+    padding: 18% 22% 0;
+    opacity: .55;
 }
 
+/* Číslo na kandidátce – odznak v rohu fotky */
 .person__num {
-    flex: 0 0 40px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
     background: var(--green-700);
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: 1.02rem;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(18, 60, 82, .28);
 }
 
-.person__name { font-weight: 700; font-size: 1.06rem; color: var(--green-900); margin: 0 0 1px; }
-.person__age { margin: 0; color: var(--ink-soft); font-size: .88rem; }
+.person__body { padding: 16px 18px 18px; }
+
+.person__name { font-weight: 700; font-size: 1.04rem; color: var(--green-900); margin: 0 0 1px; }
+.person__age { margin: 0; color: var(--ink-soft); font-size: .86rem; }
 
 .person__role {
-    margin: 14px 0 0;
+    margin: 10px 0 0;
     color: var(--blue-700);
-    font-size: .94rem;
+    font-size: .9rem;
     font-weight: 600;
-    line-height: 1.55;
+    line-height: 1.5;
 }
 
 .person__motto {
-    margin: 14px 0 0;
-    padding-left: 14px;
+    margin: 12px 0 0;
+    padding-left: 12px;
     border-left: 3px solid var(--green-050);
     color: var(--ink-soft);
-    font-size: .94rem;
+    font-size: .89rem;
     font-style: italic;
-    line-height: 1.6;
+    line-height: 1.55;
 }
 
 .person__age:empty, .person__role:empty, .person__motto:empty { display: none; }
@@ -441,8 +448,9 @@ a:hover { color: var(--blue-900); }
 }
 
 @media (max-width: 520px) {
-    .person { gap: 12px; }
-    .person__photo { flex: 0 0 96px; width: 96px; }
+    .people { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; }
+    .person__body { padding: 12px 13px 14px; }
+    .person__num { width: 30px; height: 30px; font-size: .9rem; right: 8px; bottom: 8px; }
 }
 
 @media (max-width: 640px) {
