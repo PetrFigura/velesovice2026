@@ -313,7 +313,7 @@ a:hover { color: var(--blue-900); }
 .people {
     display: grid;
     gap: 18px;
-    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
     align-items: start;              /* karty se neroztahují na výšku sousedů */
 }
 
@@ -323,6 +323,22 @@ a:hover { color: var(--blue-900); }
     border-radius: var(--radius);
     padding: 20px 22px;
     box-shadow: var(--shadow);
+    display: flex;
+    gap: 18px;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.person__body { flex: 1 1 auto; min-width: 0; }
+
+/* Vyfotografovaný portrét bez pozadí – „stojí“ na spodní hraně karty */
+.person__photo {
+    flex: 0 0 132px;
+    width: 132px;
+    height: auto;
+    display: block;
+    margin-bottom: -20px;
+    align-self: flex-end;
 }
 
 /* Hlavička karty: číslo nebo fotka + jméno */
@@ -344,36 +360,6 @@ a:hover { color: var(--blue-900); }
     justify-content: center;
     font-weight: 700;
     font-size: 1.02rem;
-}
-
-/* Kandidát s fotografií: portrét v kolečku, číslo jako odznak v rohu */
-.person__avatar {
-    position: relative;
-    flex: 0 0 64px;
-    width: 64px;
-    height: 64px;
-}
-
-.person__avatar img {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center 18%;
-    background: #fff;
-    border: 2px solid var(--green-050);
-    display: block;
-}
-
-.person__avatar .person__num {
-    position: absolute;
-    bottom: -4px;
-    left: -4px;
-    flex: none;
-    width: 26px;
-    height: 26px;
-    font-size: .78rem;
-    border: 2px solid #fff;
 }
 
 .person__name { font-weight: 700; font-size: 1.06rem; color: var(--green-900); margin: 0 0 1px; }
@@ -452,6 +438,11 @@ a:hover { color: var(--blue-900); }
 
 @media (max-width: 900px) {
     .hero__crest { height: 92px; right: 22px; top: 26px; }
+}
+
+@media (max-width: 520px) {
+    .person { gap: 12px; }
+    .person__photo { flex: 0 0 96px; width: 96px; }
 }
 
 @media (max-width: 640px) {
