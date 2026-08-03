@@ -341,6 +341,36 @@ a:hover { color: var(--blue-900); }
     font-size: 1.05rem;
 }
 
+/* Kandidát s fotografií: kolečko s číslem v rohu */
+.person__avatar {
+    position: relative;
+    flex: 0 0 76px;
+    width: 76px;
+    height: 76px;
+}
+
+.person__avatar img {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 22%;
+    background: #fff;
+    border: 2px solid var(--green-050);
+    display: block;
+}
+
+.person__avatar .person__num {
+    position: absolute;
+    bottom: -3px;
+    left: -3px;
+    flex: none;
+    width: 28px;
+    height: 28px;
+    font-size: .85rem;
+    border: 2px solid #fff;
+}
+
 .person__name { font-weight: 700; font-size: 1.08rem; color: var(--green-900); margin: 0 0 2px; }
 .person__age { margin: 0 0 6px; color: var(--ink-soft); font-size: .9rem; }
 .person__role { margin: 0 0 12px; color: var(--blue-700); font-size: .95rem; font-weight: 600; }
