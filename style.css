@@ -313,24 +313,29 @@ a:hover { color: var(--blue-900); }
 .people {
     display: grid;
     gap: 18px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    align-items: start;              /* karty se neroztahují na výšku sousedů */
 }
 
 .person {
     background: #fff;
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    padding: 22px 24px;
+    padding: 20px 22px;
     box-shadow: var(--shadow);
+}
+
+/* Hlavička karty: číslo nebo fotka + jméno */
+.person__head {
     display: flex;
-    gap: 16px;
-    align-items: flex-start;
+    align-items: center;
+    gap: 14px;
 }
 
 .person__num {
-    flex: 0 0 42px;
-    width: 42px;
-    height: 42px;
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: var(--green-700);
     color: #fff;
@@ -338,23 +343,23 @@ a:hover { color: var(--blue-900); }
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: 1.05rem;
+    font-size: 1.02rem;
 }
 
-/* Kandidát s fotografií: kolečko s číslem v rohu */
+/* Kandidát s fotografií: portrét v kolečku, číslo jako odznak v rohu */
 .person__avatar {
     position: relative;
-    flex: 0 0 76px;
-    width: 76px;
-    height: 76px;
+    flex: 0 0 64px;
+    width: 64px;
+    height: 64px;
 }
 
 .person__avatar img {
-    width: 76px;
-    height: 76px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
     object-fit: cover;
-    object-position: center 22%;
+    object-position: center 18%;
     background: #fff;
     border: 2px solid var(--green-050);
     display: block;
@@ -362,25 +367,32 @@ a:hover { color: var(--blue-900); }
 
 .person__avatar .person__num {
     position: absolute;
-    bottom: -3px;
-    left: -3px;
+    bottom: -4px;
+    left: -4px;
     flex: none;
-    width: 28px;
-    height: 28px;
-    font-size: .85rem;
+    width: 26px;
+    height: 26px;
+    font-size: .78rem;
     border: 2px solid #fff;
 }
 
-.person__name { font-weight: 700; font-size: 1.08rem; color: var(--green-900); margin: 0 0 2px; }
-.person__age { margin: 0 0 6px; color: var(--ink-soft); font-size: .9rem; }
-.person__role { margin: 0 0 12px; color: var(--blue-700); font-size: .95rem; font-weight: 600; }
+.person__name { font-weight: 700; font-size: 1.06rem; color: var(--green-900); margin: 0 0 1px; }
+.person__age { margin: 0; color: var(--ink-soft); font-size: .88rem; }
+
+.person__role {
+    margin: 14px 0 0;
+    color: var(--blue-700);
+    font-size: .94rem;
+    font-weight: 600;
+    line-height: 1.55;
+}
 
 .person__motto {
-    margin: 0;
+    margin: 14px 0 0;
     padding-left: 14px;
     border-left: 3px solid var(--green-050);
     color: var(--ink-soft);
-    font-size: .96rem;
+    font-size: .94rem;
     font-style: italic;
     line-height: 1.6;
 }
