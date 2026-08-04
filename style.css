@@ -390,6 +390,38 @@ a:hover { color: var(--blue-900); }
     line-height: 1.55;
 }
 
+/* Delší medailonek: mezititulky, odstavce a odrážky */
+.person__section {
+    margin: 16px 0 0;
+    font-size: .74rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--green-700);
+    border-top: 1px solid var(--line);
+    padding-top: 12px;
+}
+
+.person__text {
+    margin: 7px 0 0;
+    font-size: .88rem;
+    color: var(--ink-soft);
+    line-height: 1.55;
+}
+
+.person__text strong { color: var(--green-900); }
+
+.person__list {
+    margin: 8px 0 0;
+    padding-left: 1.05em;
+    font-size: .88rem;
+    color: var(--ink-soft);
+    line-height: 1.5;
+}
+
+.person__list li + li { margin-top: 7px; }
+.person__list strong { color: var(--blue-700); }
+
 .person__age:empty, .person__role:empty, .person__motto:empty { display: none; }
 
 /* ---------- Poznámka / callout ---------- */
