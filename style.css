@@ -473,6 +473,25 @@ a:hover { color: var(--blue-900); }
     color: rgba(255, 255, 255, .65);
 }
 
+.team-photo {
+    margin: 0 0 34px;
+}
+
+.team-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(15, 40, 25, .16);
+}
+
+.team-photo figcaption {
+    margin-top: 10px;
+    font-size: .92rem;
+    color: var(--text-soft, #5a6672);
+    text-align: center;
+}
+
 /* ---------- Mobil ---------- */
 
 @media (max-width: 900px) {
