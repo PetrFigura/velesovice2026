@@ -1,4 +1,4 @@
-# Web je zatím v interní přípravě – roboty nechceme.
-# Po spuštění kampaně vrátit na: Allow: / + odkaz na sitemapu.
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://velesovice2026.cz/sitemap.xml
