@@ -492,6 +492,76 @@ a:hover { color: var(--blue-900); }
     text-align: center;
 }
 
+
+/* ---------- Rozbalovací fotografie u bodů programu ---------- */
+
+.more { margin-top: 4px; }
+
+.more__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 9px 18px;
+    border: 1.5px solid var(--green-500);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--green-900);
+    font: inherit;
+    font-size: .95rem;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    transition: background .15s, border-color .15s;
+}
+
+.more__btn:hover { background: var(--green-050); border-color: var(--green-700); }
+.more__btn:focus-visible { outline: 3px solid var(--blue-500); outline-offset: 2px; }
+
+.more__icon {
+    width: 9px;
+    height: 9px;
+    border-right: 2px solid var(--green-700);
+    border-bottom: 2px solid var(--green-700);
+    transform: rotate(45deg) translate(-2px, -2px);
+    transition: transform .2s;
+}
+
+.more__btn[aria-expanded="true"] .more__icon {
+    transform: rotate(-135deg) translate(-2px, -2px);
+}
+
+.more__panel {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .35s ease;
+}
+
+.more__panel[hidden] { display: none; }
+
+.point__figure {
+    margin: 16px 0 0;
+}
+
+.point__figure img {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+}
+
+.point__figure figcaption {
+    margin-top: 8px;
+    max-width: 560px;
+    font-size: .92rem;
+    color: var(--ink-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .more__panel, .more__icon { transition: none; }
+}
+
 /* ---------- Mobil ---------- */
 
 @media (max-width: 900px) {
