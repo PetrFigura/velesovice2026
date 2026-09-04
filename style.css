@@ -531,14 +531,15 @@ a:hover { color: var(--blue-900); }
 }
 
 .more__panel {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows .35s ease;
+    animation: more-in .25s ease both;
 }
 
-.more__panel.is-open { grid-template-rows: 1fr; }
+.more__inner { min-height: 0; }
 
-.more__inner { overflow: hidden; min-height: 0; }
+@keyframes more-in {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: none; }
+}
 
 .more__panel[hidden] { display: none; }
 
@@ -563,10 +564,10 @@ a:hover { color: var(--blue-900); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .more__panel, .more__icon { transition: none; }
+    .more__panel { animation: none; }
+    .more__icon { transition: none; }
 }
 
-.point__figure img { aspect-ratio: attr(width) / attr(height); }
 
 /* ---------- Mobil ---------- */
 

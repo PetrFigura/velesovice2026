@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Volební program – SNK Velešovice 2026</title>
 <meta name="description" content="Volební program sdružení nezávislých kandidátů Velešovice pro komunální volby 2026: bezpečnost, protipovodňová opatření, osvětlení, bydlení pro seniory, otevřená komunikace.">
-<link rel="stylesheet" href="style.css?v=50">
+<link rel="stylesheet" href="style.css?v=51">
 <link rel="icon" href="img/znak.svg" type="image/svg+xml">
 </head>
 <body>
@@ -311,15 +311,7 @@
       var otevreno = btn.getAttribute('aria-expanded') === 'true';
       btn.setAttribute('aria-expanded', String(!otevreno));
       label.textContent = otevreno ? 'Zobrazit více' : 'Skrýt';
-      if (otevreno) {
-        panel.classList.remove('is-open');
-        window.setTimeout(function () {
-          if (btn.getAttribute('aria-expanded') === 'false') { panel.hidden = true; }
-        }, 350);
-      } else {
-        panel.hidden = false;
-        window.requestAnimationFrame(function () { panel.classList.add('is-open'); });
-      }
+      panel.hidden = otevreno;
     });
   });
 })();
