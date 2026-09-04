@@ -531,10 +531,14 @@ a:hover { color: var(--blue-900); }
 }
 
 .more__panel {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height .35s ease;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows .35s ease;
 }
+
+.more__panel.is-open { grid-template-rows: 1fr; }
+
+.more__inner { overflow: hidden; min-height: 0; }
 
 .more__panel[hidden] { display: none; }
 
@@ -561,6 +565,8 @@ a:hover { color: var(--blue-900); }
 @media (prefers-reduced-motion: reduce) {
     .more__panel, .more__icon { transition: none; }
 }
+
+.point__figure img { aspect-ratio: attr(width) / attr(height); }
 
 /* ---------- Mobil ---------- */
 

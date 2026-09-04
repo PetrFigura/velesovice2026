@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Volební program – SNK Velešovice 2026</title>
 <meta name="description" content="Volební program sdružení nezávislých kandidátů Velešovice pro komunální volby 2026: bezpečnost, protipovodňová opatření, osvětlení, bydlení pro seniory, otevřená komunikace.">
-<link rel="stylesheet" href="style.css?v=49">
+<link rel="stylesheet" href="style.css?v=50">
 <link rel="icon" href="img/znak.svg" type="image/svg+xml">
 </head>
 <body>
@@ -62,10 +62,12 @@
             </button>
           </div>
           <div class="more__panel" id="foto-1" hidden>
+            <div class="more__inner">
             <figure class="point__figure">
-              <img src="img/program-foto/prechod-u-skoly.jpg" alt="Krajská silnice u školy, kde chceme prosadit přechod pro chodce" loading="lazy" decoding="async">
+              <img src="img/program-foto/prechod-u-skoly.jpg" width="825" height="1100" alt="Krajská silnice u školy, kde chceme prosadit přechod pro chodce" loading="lazy" decoding="async">
               <figcaption>Krajská silnice u školy, kde chceme prosadit přechod pro chodce</figcaption>
             </figure>
+            </div>
           </div>
 
         </article>
@@ -81,10 +83,12 @@
             </button>
           </div>
           <div class="more__panel" id="foto-2" hidden>
+            <div class="more__inner">
             <figure class="point__figure">
-              <img src="img/program-foto/rakovec.jpg" alt="Rakovec – místo, které potřebuje revizi protipovodňových opatření" loading="lazy" decoding="async">
+              <img src="img/program-foto/rakovec.jpg" width="825" height="1100" alt="Rakovec – místo, které potřebuje revizi protipovodňových opatření" loading="lazy" decoding="async">
               <figcaption>Rakovec – místo, které potřebuje revizi protipovodňových opatření</figcaption>
             </figure>
+            </div>
           </div>
 
         </article>
@@ -112,14 +116,16 @@
             </button>
           </div>
           <div class="more__panel" id="foto-4" hidden>
+            <div class="more__inner">
             <figure class="point__figure">
-              <img src="img/program-foto/odklon-techniky-1.jpg" alt="Obytnou zónou dnes projíždí těžká zemědělská technika" loading="lazy" decoding="async">
+              <img src="img/program-foto/odklon-techniky-1.jpg" width="825" height="1100" alt="Obytnou zónou dnes projíždí těžká zemědělská technika" loading="lazy" decoding="async">
               <figcaption>Obytnou zónou dnes projíždí těžká zemědělská technika</figcaption>
             </figure>
             <figure class="point__figure">
-              <img src="img/program-foto/odklon-techniky-2.jpg" alt="Zadní obecní cesta, kterou chceme zpevnit a využít pro odklon dopravy" loading="lazy" decoding="async">
+              <img src="img/program-foto/odklon-techniky-2.jpg" width="1365" height="831" alt="Zadní obecní cesta, kterou chceme zpevnit a využít pro odklon dopravy" loading="lazy" decoding="async">
               <figcaption>Zadní obecní cesta, kterou chceme zpevnit a využít pro odklon dopravy</figcaption>
             </figure>
+            </div>
           </div>
 
         </article>
@@ -138,10 +144,12 @@
             </button>
           </div>
           <div class="more__panel" id="foto-5" hidden>
+            <div class="more__inner">
             <figure class="point__figure">
-              <img src="img/program-foto/komunitni-bydleni.jpg" alt="Obecní pozemek určený pro komunitní podporované bydlení" loading="lazy" decoding="async">
+              <img src="img/program-foto/komunitni-bydleni.jpg" width="1294" height="745" alt="Obecní pozemek určený pro komunitní podporované bydlení" loading="lazy" decoding="async">
               <figcaption>Obecní pozemek určený pro komunitní podporované bydlení</figcaption>
             </figure>
+            </div>
           </div>
 
         </article>
@@ -170,10 +178,12 @@
             </button>
           </div>
           <div class="more__panel" id="foto-8" hidden>
+            <div class="more__inner">
             <figure class="point__figure">
-              <img src="img/program-foto/chodnik-k-mlynu.jpg" alt="Úsek hlavní silnice k mlýnu, kde dnes chodník chybí" loading="lazy" decoding="async">
+              <img src="img/program-foto/chodnik-k-mlynu.jpg" width="825" height="1100" alt="Úsek hlavní silnice k mlýnu, kde dnes chodník chybí" loading="lazy" decoding="async">
               <figcaption>Úsek hlavní silnice k mlýnu, kde dnes chodník chybí</figcaption>
             </figure>
+            </div>
           </div>
 
         </article>
@@ -189,10 +199,12 @@
             </button>
           </div>
           <div class="more__panel" id="foto-9" hidden>
+            <div class="more__inner">
             <figure class="point__figure">
-              <img src="img/program-foto/cyklostezka.jpg" alt="Polní cesta směrem na Slavíkovice – možná trasa cyklostezky" loading="lazy" decoding="async">
+              <img src="img/program-foto/cyklostezka.jpg" width="1400" height="1050" alt="Polní cesta směrem na Slavíkovice – možná trasa cyklostezky" loading="lazy" decoding="async">
               <figcaption>Polní cesta směrem na Slavíkovice – možná trasa cyklostezky</figcaption>
             </figure>
+            </div>
           </div>
 
         </article>
@@ -300,21 +312,13 @@
       btn.setAttribute('aria-expanded', String(!otevreno));
       label.textContent = otevreno ? 'Zobrazit více' : 'Skrýt';
       if (otevreno) {
-        panel.style.maxHeight = panel.scrollHeight + 'px';
-        requestAnimationFrame(function () { panel.style.maxHeight = '0px'; });
-        panel.addEventListener('transitionend', function skryt() {
-          panel.hidden = true;
-          panel.style.maxHeight = '';
-          panel.removeEventListener('transitionend', skryt);
-        });
+        panel.classList.remove('is-open');
+        window.setTimeout(function () {
+          if (btn.getAttribute('aria-expanded') === 'false') { panel.hidden = true; }
+        }, 350);
       } else {
         panel.hidden = false;
-        panel.style.maxHeight = '0px';
-        requestAnimationFrame(function () { panel.style.maxHeight = panel.scrollHeight + 'px'; });
-        panel.addEventListener('transitionend', function hotovo() {
-          panel.style.maxHeight = 'none';
-          panel.removeEventListener('transitionend', hotovo);
-        });
+        window.requestAnimationFrame(function () { panel.classList.add('is-open'); });
       }
     });
   });
