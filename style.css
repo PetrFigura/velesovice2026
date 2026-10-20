@@ -569,6 +569,94 @@ a:hover { color: var(--blue-900); }
 }
 
 
+
+/* ---------- Výsledky voleb ---------- */
+
+.cisla {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-top: 28px;
+}
+
+.cislo {
+    background: var(--green-050);
+    border-radius: var(--radius);
+    padding: 20px 22px;
+}
+
+.cislo__hodnota {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--green-900);
+    line-height: 1.1;
+}
+
+.cislo__popis {
+    display: block;
+    margin-top: 6px;
+    font-size: .95rem;
+    color: var(--ink-soft);
+}
+
+.tabulka-obal { overflow-x: auto; margin-top: 18px; }
+
+.tabulka {
+    width: 100%;
+    min-width: 480px;
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+.tabulka th,
+.tabulka td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+}
+
+.tabulka thead th {
+    background: var(--green-900);
+    color: #fff;
+    font-size: .92rem;
+    letter-spacing: .02em;
+    border-bottom: 0;
+}
+
+.tabulka thead th:first-child { border-radius: 10px 0 0 0; }
+.tabulka thead th:last-child { border-radius: 0 10px 0 0; }
+
+.tabulka .cislice { text-align: right; white-space: nowrap; }
+.tabulka th.cislice { text-align: right; }
+
+.tabulka__nase td,
+.tabulka__zvolen td { background: var(--green-050); font-weight: 600; }
+
+.stav {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: var(--line);
+    color: var(--ink);
+    font-size: .86rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.stav--zvolen { background: var(--green-700); color: #fff; }
+
+.poznamka {
+    margin-top: 14px;
+    font-size: .92rem;
+    color: var(--ink-soft);
+}
+
+@media (max-width: 520px) {
+    .cislo__hodnota { font-size: 1.7rem; }
+    .tabulka th, .tabulka td { padding: 10px; }
+}
+
 /* ---------- Mobil ---------- */
 
 @media (max-width: 900px) {
