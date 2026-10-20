@@ -608,6 +608,37 @@ a:hover { color: var(--blue-900); }
 .text-blok h2 { margin-bottom: .5em; }
 .text-blok p { margin-bottom: 1em; }
 
+.skupina {
+    margin: 46px 0 2px;
+}
+
+.skupina:first-of-type { margin-top: 32px; }
+
+.skupina__popis {
+    max-width: 44em;
+    color: var(--ink-soft);
+    margin-bottom: 20px;
+}
+
+.person__stitek {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: var(--green-700);
+    color: #fff;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+}
+
+.person__hlasy {
+    margin-top: 2px;
+    font-size: .92rem;
+    font-weight: 600;
+    color: var(--green-700);
+}
+
 .podpis {
     font-weight: 700;
     color: var(--green-900);
