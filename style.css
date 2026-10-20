@@ -476,6 +476,13 @@ a:hover { color: var(--blue-900); }
     padding: 4px;
 }
 
+.footer__mini {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: .82rem;
+    color: rgba(255, 255, 255, .55);
+}
+
 .footer__bottom {
     border-top: 1px solid rgba(255, 255, 255, .2);
     padding-top: 16px;
