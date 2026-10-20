@@ -600,6 +600,14 @@ a:hover { color: var(--blue-900); }
     color: var(--ink-soft);
 }
 
+.text-blok {
+    max-width: 44em;
+    margin-top: 26px;
+}
+
+.text-blok h2 { margin-bottom: .5em; }
+.text-blok p { margin-bottom: 1em; }
+
 .tabulka-obal { overflow-x: auto; margin-top: 18px; }
 
 .tabulka {
