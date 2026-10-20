@@ -608,6 +608,11 @@ a:hover { color: var(--blue-900); }
 .text-blok h2 { margin-bottom: .5em; }
 .text-blok p { margin-bottom: 1em; }
 
+.podpis {
+    font-weight: 700;
+    color: var(--green-900);
+}
+
 .tabulka-obal { overflow-x: auto; margin-top: 18px; }
 
 .tabulka {
