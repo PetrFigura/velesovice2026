@@ -317,6 +317,16 @@ a:hover { color: var(--blue-900); }
     align-items: start;              /* karty se neroztahují na výšku sousedů */
 }
 
+.people--ctyri { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 900px) {
+    .people--ctyri { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 520px) {
+    .people--ctyri { grid-template-columns: repeat(2, 1fr); }
+}
+
 .person {
     background: #fff;
     border: 1px solid var(--line);
